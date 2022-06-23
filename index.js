@@ -1,38 +1,37 @@
-const precoRefrigerante = 11.99
-    let qntRefrigerante = 3
-    let valorRefrigerante = qntRefrigerante * precoRefrigerante
+    alert('Olá, vamos somar a nossa compra?')
+    
+    const somaRefrigerante = parseFloat(prompt("Digite o valor do Refrigerante"))
+    let quantidadeRefrigerante = parseInt(prompt("São Quantos Refrigerante?"))
 
-const precoMacarrao = 6.99
-    let qntMacarrao = 4
-    let valorMacarrao = qntMacarrao * precoMacarrao
+    const somaMacarrao = parseFloat(prompt("Digite o valor do Macarrao"))
+    let quantidadeMacarrao = parseInt(prompt("São Quantos Macarrão?"))
 
-const precoErvilha = 6.99
-    let qntErvilha = 3
-    let valorErvilha = qntErvilha * precoErvilha
+    const somaErvilha = parseFloat(prompt("Digite o valor da Ervilha"))
+    let quantidadeErvilha = parseInt(prompt("São Quantas Ervilhas?"))
 
-const precoArroz = 22.99
-    let qntArroz = 3
-    let valorArroz = qntArroz * precoArroz
+    const somaArroz = parseFloat(prompt("Digite o valor do Arroz"))
+    let quantidadeArroz = parseInt(prompt("São Quantos Arroz?"))
 
-const precoFeijao = 11.89
-    let qntFeijao = 2
-    let valorFeijao = qntFeijao * precoFeijao
+    const somaFeijao = parseFloat(prompt("Digite o valor do Feijão"))
+    let quantidadeFeijao = parseInt(prompt("São Quantos Feijões?"))
 
-const precoVinho = 70.00
-    let qntVinho = 3
-    let valorVinho = qntVinho * precoVinho
+    const somaVinho = parseFloat(prompt("Digite o valor do Vinho"))
+    let quantidadeVinho = parseInt(prompt("São Quantos Vinhos?"))
 
-let valorTotal = valorRefrigerante + valorMacarrao + valorErvilha + valorArroz + valorFeijao + valorVinho
-    console.log(`O Valor total da compra é: ${valorTotal}`)
+    const total = somaRefrigerante * quantidadeRefrigerante + somaMacarrao * quantidadeMacarrao + somaErvilha * quantidadeErvilha + somaArroz * quantidadeArroz + somaFeijao * quantidadeFeijao + somaVinho * quantidadeVinho
 
+    alert(`Valor total a ser pago: ${total}`)
 
-    if (valorTotal % 2 == 0) {
+    let divisao = total / 2
+
+    if (total % 2 == 0) { 
     alert('O valor total da compra é Par')
+    alert(`Cada um deve pagar exatamente: ${divisao - (somaVinho * quantidadeVinho)} e meu amigo pagará: ${divisao + (somaVinho * quantidadeVinho)}`)
      
     }   else {
     alert('O valor total da compra é Impar')
+    alert(`Cada um deve pagar exatamente: ${divisao}`)
     }
 
-let divisao = valorTotal / 2
-    console.log(`Cada um deve pagar exatamente: ${divisao}`)
-    alert('O valor total será dividido entre ambos pois a Soma total é Impar')
+   
+    
